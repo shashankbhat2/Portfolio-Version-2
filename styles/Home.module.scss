@@ -1,0 +1,125 @@
+.home {
+  margin: 50px 10px;
+  h2 {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #0469ff;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 20px 0px;
+      max-width: 350px;
+      font-size: 14px;
+    }
+    .hero_cta {
+      display: inline-flex;
+      align-items: center;
+      width: 320px;
+      justify-content: space-between;
+      a {
+        background: black;
+        padding: 15px;
+        font-size: 14px;
+        color: white;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .work_container {
+    .work_grid {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 30px;
+      .work_card {
+        height: 300px;
+        width: 300px;
+        cursor: pointer;
+        overflow: hidden;
+        img {
+          height: inherit;
+          width: inherit;
+        }
+        .work_details {
+          display: none;
+          background-image: linear-gradient(
+            to top,
+            rgb(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.5)
+          );
+          position: relative;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 10px;
+          height: auto;
+          z-index: 100;
+          color: white;
+          transition: 1s ease;
+          p {
+            margin: 10px;
+            font-size: 16px;
+            &:last-child {
+              font-size: 12px;
+            }
+          }
+        }
+        &:hover > .work_details {
+          display: flex;
+        }
+        &:active > .work_details {
+          display: flex;
+        }
+      }
+    }
+  }
+  .tech_stack_container{
+    p{
+      max-width: 300px;
+      font-size: 14px;
+    }
+    .tech_stack_block{
+      width: 300px;
+      margin: 20px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .tech_stack_tab{
+        display: flex;
+        flex-wrap: wrap;
+        background: black;
+        color: white;
+        padding: 10px;
+      }
+    }
+  }
+  .banner{
+    a{
+      background: black;
+      padding: 10px;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    p {
+      max-width: 400px;
+      font-size: 18px;
+    }
+  }
+  .work_container {
+    .work_grid {
+      flex-direction: row !important;
+    }
+  }
+  .tech_stack_container{
+    p{
+      max-width: 500px !important;
+      font-size: 18px !important;
+    }
+  }
+}
